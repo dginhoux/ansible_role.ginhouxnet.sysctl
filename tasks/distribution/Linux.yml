@@ -1,0 +1,9 @@
+---
+- name: set sysctl settings
+  sysctl:
+    name: "{{ item.name }}"
+    value: "{{ item.value }}"
+    reload: "yes"
+    sysctl_set: "yes"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ sysctl_settings }}"
