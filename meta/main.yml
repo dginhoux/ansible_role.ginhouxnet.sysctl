@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: ginhouxnet.
+  role_name: 
   description: configure sysctl
   author: dginhoux
   company: ginhouxnet
