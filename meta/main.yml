@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  role_name: 
+  role_name:
   description: configure sysctl
   author: dginhoux
   company: ginhouxnet
@@ -23,6 +23,5 @@ galaxy_info:
         - "8"
   galaxy_tags:
     - sysctl
-
 
 dependencies: []
