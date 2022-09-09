@@ -13,7 +13,6 @@ This role is built to only run on platforms defined in `meta/main.yml`
 Role Variables
 --------------
 
-It's just a simple list like : 
 
 ```
 sysctl_settings:
@@ -27,6 +26,7 @@ Dependencies
 ------------
 
 none
+
 
 Example Playbook
 ----------------
