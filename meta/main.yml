@@ -1,7 +1,7 @@
 ---
 galaxy_info:
-  role_name:
-  description: configure sysctl
+  role_name: sysctl
+  description: dginhoux.sysctl
   author: Dany GINHOUX
   company: dginhoux
   license: MIT
