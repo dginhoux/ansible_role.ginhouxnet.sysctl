@@ -1,7 +1,8 @@
 ---
 galaxy_info:
   role_name: sysctl
-  description: dginhoux.sysctl
+  description: |
+    This ansible role configure sysctl.
   author: Dany GINHOUX
   company: dginhoux
   license: MIT
