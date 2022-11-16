@@ -1,5 +1,5 @@
 ---
-- name: set sysctl settings
+- name: Set sysctl settings
   ansible.posix.sysctl:
     name: "{{ item.name }}"
     value: "{{ item.value }}"
