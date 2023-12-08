@@ -1,5 +1,9 @@
 ---
-sysctl_settings:
-  - name: vm.swappiness
-    value: 60
-    state: present
+# sysctl_list:
+#   - name: vm.swappiness
+#     value: 60
+#     state: present
+
+sysctl_list: []
+sysctl_list_host: []
+sysctl_list_group: []

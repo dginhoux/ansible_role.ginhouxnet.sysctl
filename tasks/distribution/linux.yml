@@ -1,9 +1,12 @@
 ---
 - name: Set sysctl settings
-  with_items: "{{ sysctl_settings }}"
+  loop: "{{ sysctl_list + sysctl_list_host + sysctl_list_group | flatten(levels=1) }}"
+  loop_control:
+    loop_var: setting
+    label: "setting: {{ setting.name }}"
   ansible.posix.sysctl:
-    name: "{{ item.name }}"
-    value: "{{ item.value }}"
+    name: "{{ setting.name }}"
+    value: "{{ setting.value }}"
     reload: true
     sysctl_set: true
-    state: "{{ item.state | default('present') }}"
+    state: "{{ setting.state | default('present') }}"
