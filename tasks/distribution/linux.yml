@@ -1,5 +1,6 @@
 ---
 - name: Set sysctl settings
+  become: true
   loop: "{{ sysctl_list + sysctl_list_host + sysctl_list_group | flatten(levels=1) }}"
   loop_control:
     loop_var: setting
