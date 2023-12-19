@@ -48,9 +48,10 @@ git clone https://github.com/dginhoux/ansible_role.sysctl dginhoux.sysctl
 #### EXAMPLE PLAYBOOK
 
 ```yaml
-- hosts: all
+- name: Playbook
+  hosts: all
   roles:
-    - name: start role dginhoux.sysctl
+    - name: Start role dginhoux.sysctl
       ansible.builtin.include_role:
         name: dginhoux.sysctl
 ```
@@ -63,11 +64,18 @@ git clone https://github.com/dginhoux/ansible_role.sysctl dginhoux.sysctl
 Defaults variables defined in `defaults/main.yml` : 
 
 ```yaml
-sysctl_settings:
+sysctl_list:
   - name: vm.swappiness
     value: 60
     state: present
+
+sysctl_list_host: []
+sysctl_list_group: []
 ```
+
+NOTE : Theses 3 lists `sysctl_list`, `sysctl_list_group` and `sysctl_list_host` are merged. <br />
+You can use the host and group lists to specify users per host or group off hosts.
+
 
 #### DEFAULT OS SPECIFIC VARIABLES
 
