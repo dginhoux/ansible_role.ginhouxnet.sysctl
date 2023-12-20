@@ -50,7 +50,7 @@ git clone https://github.com/dginhoux/ansible_role.sysctl dginhoux.sysctl
 ```yaml
 - name: Playbook
   hosts: all
-  roles:
+  tasks:
     - name: Start role dginhoux.sysctl
       ansible.builtin.include_role:
         name: dginhoux.sysctl
@@ -61,7 +61,10 @@ git clone https://github.com/dginhoux/ansible_role.sysctl dginhoux.sysctl
 
 #### DEFAULT VARIABLES
 
-Defaults variables defined in `defaults/main.yml` : 
+Defaults variables defined in `defaults/main.yml`
+
+
+#### EXAMPLES VARIABLES
 
 ```yaml
 sysctl_list:
