@@ -74,7 +74,7 @@ sysctl_list_group: []
 ```
 
 NOTE : Theses 3 lists `sysctl_list`, `sysctl_list_group` and `sysctl_list_host` are merged. <br />
-You can use the host and group lists to specify users per host or group off hosts.
+You can use the `_host` and `_group` lists to specify per host and/or per group content.
 
 
 #### DEFAULT OS SPECIFIC VARIABLES
