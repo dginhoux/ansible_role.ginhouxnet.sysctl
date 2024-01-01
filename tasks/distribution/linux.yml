@@ -11,3 +11,16 @@
     reload: true
     sysctl_set: true
     state: "{{ setting.state | default('present') }}"
+
+
+- name: Restart systemd-sysctl.service
+  become: true
+  when:
+    - ansible_service_mgr == "systemd"
+  ansible.builtin.systemd:
+    name: systemd-sysctl.service
+    enabled: true
+    state: restarted
+    scope: system 
+    daemon_reload: true
+
